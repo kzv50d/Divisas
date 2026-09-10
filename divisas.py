@@ -5,6 +5,12 @@ import pandas as pd
 # 1. Configurar la URL específica de monedas y los encabezados de simulación
 url = "https://yahoo.com"
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
+# Realizar la petición y definir la variable 'response
+response = requests.get(url, headers=headers)
 
 # 2. Parsear el documento HTML con BeautifulSoup
 soup = BeautifulSoup(response.text, "html.parser")
