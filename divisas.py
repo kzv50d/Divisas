@@ -2,10 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-script_code = """import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-
 url = "https://yahoo.com"
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -45,8 +41,3 @@ if tabla:
         print("Error: No se lograron extraer filas con datos válidos de la tabla.")
 else:
     print("Error: No se localizó ninguna estructura de tabla (<table>) en el código HTML.")
-"""
-
-with open("divisas.py", "w", encoding="utf-8") as f:
-    f.write(script_code)
-print("Archivo 'divisas.py' guardado con éxito en el formato requerido.")
