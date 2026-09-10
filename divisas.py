@@ -1,4 +1,3 @@
-%%writefile divisas.py
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -42,3 +41,5 @@ if tabla:
         print("Error: No se lograron extraer filas con datos válidos de la tabla.")
 else:
     print("Error: No se localizó ninguna estructura de tabla (<table>) en el código HTML.")
+
+
