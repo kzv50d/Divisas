@@ -2,6 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+script_code = """import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
 url = "https://yahoo.com"
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -35,5 +39,9 @@ if tabla:
 
     df = pd.DataFrame(datos)
     df.to_csv("catalogo_divisas.csv", index=False, encoding="utf-8-sig")
-   print(f"¡Scraping exitoso! Se procesaron {len(df)} divisas y se guardaron en 'catalogo_divisas.csv'.")
-  
+    print("Scraping exitoso y archivo catalogo_libros.csv creado.")
+
+  """
+
+with open("divisas.py", "w", encoding="utf-8") as f:
+    f.write(script_code)
