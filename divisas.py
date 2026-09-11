@@ -2,10 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-script_code = """import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-
 url = "https://es-us.finanzas.yahoo.com/mercados/monedas/"
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -41,7 +37,4 @@ if tabla:
   
 else:
     print("No se encontró ninguna tabla en la página")
-  """
-
-with open("divisas.py", "w", encoding="utf-8") as f:
-    f.write(script_code)
+  
